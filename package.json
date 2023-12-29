@@ -3,15 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@material-tailwind/react": "^2.1.8",
     "@mui/material": "^5.15.2",
-    "@mui/styled-engine-sc": "^6.0.0-alpha.10",
-=======
-    "@mui/material": "^5.15.2",
->>>>>>> 9a778f2f16637119f666a592572982d8889d0e33
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -21,11 +13,6 @@
     "postcss": "^8.4.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-firebase-hooks": "^5.1.1",
-    "react-hook-form": "^7.49.2",
-=======
->>>>>>> 9a778f2f16637119f666a592572982d8889d0e33
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.6",
