@@ -95,7 +95,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex  ">
+    <div className="flex">
       <div className="w-3/5">
         <img
           className="h-100 w-39"
@@ -146,9 +146,9 @@ const Login = () => {
           />
           <br></br>
 
-          <p className="text-red-500 font-bold py-2 font-['Poppins'] font-medium">{errorMessage} </p>
+          <p className="text-red-500 font-bold py-2 font-['Poppins']">{errorMessage} </p>
           <button
-            className=" bg-green-900 font-medium font-['Poppins'] p-[12px] ml-[-10rem] m-[10px] w-[20rem] rounded-md  text-[#F0FDF4] font-poppins text-md font-medium leading-[24px]"
+            className=" bg-green-900 font-['Poppins'] p-[12px] ml-[-10rem] m-[10px] w-[20rem] rounded-md  text-[#F0FDF4] font-poppins text-md font-medium leading-[24px]"
             onClick={handleButtonClick}
           >
             {isSignInForm ? "Sign in" : "Sign up"}
@@ -157,15 +157,15 @@ const Login = () => {
           <div>
             <button onClick={handleGoogle} className=" p-[12px] m-[10px] w-[20rem] ml-[-10rem] rounded-md border border-solid border-gray-100 bg-white box-shadow-md ">
               <img
-                className="flex justify-center items-center "
-                src="./Social icon.png"
+                className="flex justify-center items-center"
+                src="./images/Google_icon-icons.com_66793.png"
                 alt="logo"
               />
               <p className=" font-['Poppins'] font-medium mt-[-25px]">Sign in with Google</p>
             </button>
             <p className="py-4 cursor-pointer  font-['Poppins'] font-medium p-[12px] mt[-1remx] w-[18rem] ml-[8rem] " onClick={toggleSignInForm}>
               {isSignInForm
-                ? " New to Aahaar ? Sign Up Now"
+                ? " New to 1930 Helpline ? Sign Up Now"
                 : "Already have an account? Sign in"}
             </p>
           </div>
