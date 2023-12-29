@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Lawyerform from './components/Lawyerform';
-import Lawyerdashboard from './components/Lawyerdashboard';
+import Lawyerform from "./components/Lawyerform";
+import Lawyerdashboard from "./components/Lawyerdashboard";
 import Home from './components/Home';
 import { auth } from "./components/firebase";
 import { db } from './components/firebase';
@@ -32,7 +32,7 @@ function App() {
         <Route path="/Lawyerdashboard" element={<Lawyerdashboard/>} />
         <Route path="/Lawyerform" element={<Lawyerform db={db}/>} />
         <Route path="/Lawyerpage" element={<Lawyerpage/>} />
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
 
