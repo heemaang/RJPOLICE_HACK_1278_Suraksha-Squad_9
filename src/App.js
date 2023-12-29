@@ -8,6 +8,9 @@ import { db } from './components/firebase';
 import { doc, getDocs, collection, query } from 'firebase/firestore';
 import Login from "./components/Login";
 import Lawyerpage from "./components/Lawyerpage";
+import Accordion from "./components/Accordion";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -33,6 +36,9 @@ function App() {
         <Route path="/Lawyerform" element={<Lawyerform db={db}/>} />
         <Route path="/Lawyerpage" element={<Lawyerpage/>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/accordion" element={<Accordion/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/footer" element={<Footer/>} />
       </Routes>
     </Router>
 
