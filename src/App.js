@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Lawyerform from "./components/Lawyerform";
+import Lawyerdashboard from "./components/Lawyerdashboard";
+import Lawyerform from "./components/Lawyerform";
 import Lawyerdashboard from "./components/lawyerdashboard";
 import Home from './components/Home';
 import { auth } from "./components/firebase";
