@@ -4,10 +4,11 @@ import Accordion from "./Accordion";
 import Contact from "./Contact";
 import Footer from "./Footer";
 // import { Link } from "react-router-dom";
+import Fotter from "./Fotter";
 
 export default function Home(props) {
   return (
-    <div className="flex flex-col h-screen">
+    <div>
       <Navbar />
       <section className="dark:text-gray-100">
         <img src="/images/bg.jpg" className="w-full h-[720px] z-10" alt="" />

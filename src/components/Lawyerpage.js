@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { doc, getDocs, collection, query } from 'firebase/firestore';
-import Lawyerdashboard from './Lawyerdashboard';
+import Lawyerdashboard from "./Lawyerdashboard";
 import { db } from './firebase';
 
 function Lawyerpage() {
