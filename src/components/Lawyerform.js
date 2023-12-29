@@ -1,6 +1,7 @@
 import React, { useState, props } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { collection, addDoc } from 'firebase/firestore';
+import Navbar from './Navbar';
 
 
 
@@ -94,7 +95,8 @@ const handleChange = (e) => {
 
   return (
     <>
-    <div className="bg-gradient-to-r from-slate-800 to-slate-800 h-28">  </div>
+    <Navbar/>
+    {/* <div className="bg-gradient-to-r from-slate-800 to-slate-800 h-28">  </div> */}
     <div className="grid grid-flow-col gap-9 items-center">
     <div className="flex flex-col">
      <div className="rounded-md border border-stroke w-70% bg-white p-36 shadow-default border-strokedark bg-boxdark">

@@ -1,106 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [isRegisterDropdownOpen, setRegisterDropdownOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+    setServicesDropdownOpen(false);
+    setRegisterDropdownOpen(false);
+  };
+
+  const toggleServicesDropdown = () => {
+    setServicesDropdownOpen(!isServicesDropdownOpen);
+    setRegisterDropdownOpen(false);
+  };
+
+  const toggleRegisterDropdown = () => {
+    setRegisterDropdownOpen(!isRegisterDropdownOpen);
+    setServicesDropdownOpen(false);
+  };
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            1920 Help-Line.
-          </a>
+      <nav className="bg-gray-100 p-4">
+        <div className={`container mx-auto flex justify-between items-center ${isMobileMenuOpen ? 'flex-col' : 'lg:flex'}`}>
+          <Link to="/" className="text-2xl font-bold text-blue-500">
+            1930 Help-Line.
+          </Link>
           <button
-            className="navbar-toggler"
+            className="lg:hidden px-2 py-1 text-blue-500 border rounded border-blue-500"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            onClick={toggleMobileMenu}
           >
-            <span className="navbar-toggler-icon"></span>
+            Menu
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  AboutUs
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Services
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      {" "}
-                      AI legal Decision System
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      {" "}
-                      Connect me to a Lawyer
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Book an Appointment
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      {" "}
-                      Connect to Helpdesk
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Our Team
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Blog
-                </a>
-              </li>
-            </ul>
-            <div className="dropdown">
+          <div className={`lg:flex space-x-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+            <Link to="/" className="text-blue-500">
+              Home
+            </Link>
+            <Link to="/aboutus" className="text-blue-500">
+              About Us
+            </Link>
+            <div className="group relative">
               <button
-                className="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+                className="text-blue-500 group-hover:bg-gray-200"
+                onClick={toggleServicesDropdown}
               >
-                Regiter
+                Services
               </button>
               <div
-                className="dropdown-menu"
-                aria-labelledby="dropdownMenuButton"
+                className={`${
+                  isServicesDropdownOpen ? 'block' : 'hidden'
+                } absolute bg-white rounded shadow-md mt-2`}
               >
-                <a className="dropdown-item" href="#">
-                  Lawyer
-                </a>
-                <a className="dropdown-item" href="#">
-                  User
-                </a>
+                <Link to="/ai" className="block px-4 py-2 text-blue-500">
+                  AI Legal Decision System
+                </Link>
+                <Link to="/connect-lawyer" className="block px-4 py-2 text-blue-500">
+                  Connect me to a Lawyer
+                </Link>
+                <Link to="/book-appointment" className="block px-4 py-2 text-blue-500">
+                  Book an Appointment
+                </Link>
+                <Link to="/helpdesk" className="block px-4 py-2 text-blue-500">
+                  Connect to Helpdesk
+                </Link>
               </div>
+            </div>
+            <Link to="/team" className="text-blue-500">
+              Our Team
+            </Link>
+            <Link to="/blog" className="text-blue-500">
+              Blog
+            </Link>
+          </div>
+          <div className="group relative">
+            <button className="text-white bg-blue-500 px-4 py-2 rounded" onClick={toggleRegisterDropdown}>
+              Register
+            </button>
+            <div
+              className={`${
+                isRegisterDropdownOpen ? 'block' : 'hidden'
+              } absolute bg-white rounded shadow-md mt-2`}
+            >
+              <Link to="/lawyerform" className="block px-4 py-2 text-blue-500">
+                Lawyer
+              </Link>
+              <Link to="/login" className="block px-4 py-2 text-blue-500">
+                User
+              </Link>
             </div>
           </div>
         </div>
