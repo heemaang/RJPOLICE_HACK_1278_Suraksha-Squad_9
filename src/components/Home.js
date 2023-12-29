@@ -9,10 +9,11 @@ export default function Home(props) {
       <div className="flex-grow flex items-end justify-end">
         <img className="w-[500px]" src="./images/home.jpg" alt="" />
       </div>
-      <h2 className="text-[blue]">
-        At 1920 Help_line, we're dedicated to simplifying the legal process for
-        users and connecting them with experienced lawyers.
-      </h2>
+      <h2 className="text-blue-500">
+  At 1920 Help_line, we're dedicated to simplifying the legal process for
+  users and connecting them with experienced lawyers.
+</h2>
+
     </div>
   );
 }

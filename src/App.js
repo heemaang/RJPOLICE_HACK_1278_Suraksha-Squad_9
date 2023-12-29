@@ -24,10 +24,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         {/* <Route path="/lawyerdashboard" element={<Lawyerdashboard />} /> */}
         {/* <Route path="/lawyerform" element={<Lawyerform />} /> */}
-        <Route path="/" element={<Login />} />
+        {/* <Route path="/" element={<Login />} /> */}
       </Routes>
     </Router>
   );
