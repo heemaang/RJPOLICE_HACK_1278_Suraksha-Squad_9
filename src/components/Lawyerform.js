@@ -1,7 +1,7 @@
 import React, { useState, props } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { collection, addDoc } from 'firebase/firestore';
-import Lawyerdashboard from './Lawyerdashboard';
+import Lawyerdashboard from './lawyerdashboard';
 
 
 
