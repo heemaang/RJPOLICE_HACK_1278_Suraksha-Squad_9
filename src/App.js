@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Switch } from "react-router-dom";
 import Lawyerdashboard from "./components/Lawyerdashboard";
 import Lawyerform from "./components/Lawyerform";
 import Home from "./components/Home";
@@ -36,6 +36,9 @@ function App() {
         <Route path="/Lawyerform" element={<Lawyerform db={db}/>} />
         <Route path="/Lawyerpage" element={<Lawyerpage/>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/accordion" element={<Accordion/>} />
+        <Route path="/conatct" element={<Contact/>} />
+        <Route path="/footer" element={<Footer/>} />
       </Routes>
     </Router>
 
