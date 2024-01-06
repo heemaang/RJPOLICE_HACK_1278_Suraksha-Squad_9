@@ -1,0 +1,192 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Good day"
+        ],
+        "responses": [
+          "Greetings! How can I assist you with cybersecurity today?",
+          "Hello, thanks for reaching out. How can I help you with cybersecurity?",
+          "Hi there, what can I do for you in the realm of cybersecurity?",
+          "Hi there, how can I assist you with cybersecurity?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "See you later, stay cyber-safe!",
+          "Have a secure day!",
+          "Goodbye! If you have more cybersecurity questions, feel free to return."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+        "responses": ["You're welcome! If you have more cybersecurity inquiries, feel free to ask.", "Happy to help with cybersecurity!", "Glad I could assist you with cybersecurity."]
+      },
+      {
+        "tag": "cyberthreats",
+        "patterns": [
+          "What are common cyber threats?",
+          "Tell me about cybersecurity risks",
+          "What should I know about online security threats?"
+        ],
+        "responses": [
+          "Common cyber threats include malware, phishing, and ransomware.",
+          "Cybersecurity risks encompass threats like social engineering, DDoS attacks, and data breaches.",
+          "Stay vigilant against cyber threats like phishing scams, malware, and unauthorized access."
+        ]
+      },
+      {
+        "tag": "protect",
+        "patterns": [
+          "How can I protect my computer?",
+          "Give me cybersecurity tips",
+          "What steps should I take to secure my online presence?"
+        ],
+        "responses": [
+          "Ensure your software is up-to-date, use strong, unique passwords, and enable two-factor authentication.",
+          "Practice good cyber hygiene by updating your antivirus software and being cautious with email attachments.",
+          "Protect your devices by using firewalls, antivirus software, and keeping your operating system updated."
+        ]
+      },
+      {
+        "tag": "reporting",
+        "patterns": [
+          "How do I report a cyber incident?",
+          "What should I do if I've been hacked?",
+          "Who do I contact for a cybersecurity issue?"
+        ],
+        "responses": [
+          "Report cyber incidents to your organization's IT department or local authorities.",
+          "If you suspect a hack, change passwords immediately and report the incident to your IT support team.",
+          "Contact cybersecurity authorities or your organization's IT helpdesk to report and address any security concerns."
+        ]
+      },
+      {
+        "tag": "phishing",
+        "patterns": [
+          "How can I recognize phishing emails?",
+          "Tell me about phishing prevention",
+          "What should I do if I receive a suspicious email?"
+        ],
+        "responses": [
+          "Be cautious of unexpected emails, check sender addresses, and avoid clicking on suspicious links.",
+          "Prevent phishing by verifying email senders, not clicking on unknown links, and reporting suspicious emails.",
+          "If you receive a suspicious email, don't click on any links. Report it to your IT department or email provider."
+        ]
+      },
+      {
+        "tag": "financialfrauds",
+        "patterns": [
+          "How can I protect myself from financial frauds?",
+          "Tell me about online banking security",
+          "What steps should I take to prevent financial cybercrimes?"
+        ],
+        "responses": [
+          "Protect your financial information by using secure, unique passwords for online banking.",
+          "Enable two-factor authentication for your financial accounts for an extra layer of security.",
+          "Regularly monitor your bank statements and report any unauthorized transactions to your bank immediately."
+        ]
+      },
+      {
+        "tag": "atm_money_theft",
+        "patterns": [
+          "What should I do if my money is stolen from an ATM?",
+          "How can I report ATM money theft?",
+          "My ATM money is missing, what steps should I take?"
+        ],
+        "responses": [
+          "1. Contact your bank immediately to report the ATM money theft.",
+          "2. Provide your bank with details of the incident, including the location and time of the ATM transaction.",
+          "3. Follow your bank's instructions for reporting and resolving the ATM money theft."
+        ]
+      },
+      {
+        "tag": "credit_card_lost",
+        "patterns": [
+          "What should I do if I lose my credit card?",
+          "My credit card is lost, what steps should I take?",
+          "How can I report a lost credit card?"
+        ],
+        "responses": [
+          "1. Contact your credit card issuer immediately to report the loss of your credit card.",
+          "2. Provide necessary information, such as your card number and any recent transactions, to assist in the investigation.",
+          "3. Follow your credit card company's instructions for card replacement and additional security measures."
+        ]
+      },
+      {
+        "tag": "identity_theft",
+        "patterns": [
+          "What should I do if I suspect identity theft?",
+          "How to report identity theft?",
+          "Steps to take if I'm a victim of identity theft?"
+        ],
+        "responses": [
+          "1. Report the identity theft to the local authorities and file a police report.",
+          "2. Contact your bank, credit card companies, and other financial institutions to report the theft and secure your accounts.",
+          "3. Place a fraud alert on your credit reports and consider freezing your credit to prevent unauthorized activity."
+        ]
+      },
+      {
+        "tag": "unauthorized_home_wifi_use",
+        "patterns": [
+          "What should I do if someone is using my home WiFi without permission?",
+          "How to secure my home WiFi network?",
+          "Steps to take if I suspect unauthorized access to my home WiFi?"
+        ],
+        "responses": [
+          "1. Change your WiFi password immediately to prevent further unauthorized access.",
+          "2. Check the connected devices on your router and identify any unfamiliar devices.",
+          "3. Enable WPA3 encryption, update your router firmware, and use a strong, unique WiFi password."
+        ]
+      },
+      {
+        "tag": "lost_device_with_details",
+        "patterns": [
+          "What should I do if I lose a device with sensitive information?",
+          "Steps to take if my lost device contains personal details?",
+          "How to secure my data if I've lost a device?"
+        ],
+        "responses": [
+          "1. Remotely wipe the data on your lost device if possible.",
+          "2. Change passwords for accounts that may be accessed from the lost device.",
+          "3. Report the loss to the local authorities and, if applicable, use tracking features to locate the device."
+        ]
+      },
+      {
+        "tag": "accidental_info_sharing",
+        "patterns": [
+          "What should I do if I accidentally share sensitive information?",
+          "Steps to take if I've shared personal details accidentally?",
+          "How to mitigate the impact of accidental information sharing?"
+        ],
+        "responses": [
+          "1. Immediately retract or delete the shared information if possible.",
+          "2. Notify relevant parties about the accidental information sharing.",
+          "3. Review and update privacy settings on your accounts to prevent future accidental sharing."
+        ]
+      },
+      {
+        "tag": "unauthorized_access_online_accounts",
+        "patterns": [
+          "How can I handle unauthorized access to my online accounts?",
+          "What to do if someone breaches my online accounts?",
+          "Steps to take if I suspect unauthorized access to my accounts?"
+        ],
+        "responses": [
+          "1. Change passwords for the compromised accounts immediately.",
+          "2. Enable two-factor authentication for an extra layer of security.",
+          "3. Review account activity, log out all sessions, and report the unauthorized access to the platform."
+        ]
+      }
+    ]
+  }
+  
