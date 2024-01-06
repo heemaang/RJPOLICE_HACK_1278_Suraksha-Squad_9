@@ -26,26 +26,26 @@ export default function Navbar() {
     <div>
       <nav className="bg-gray-100 p-4">
         <div className={`container mx-auto flex justify-between items-center ${isMobileMenuOpen ? 'flex-col' : 'lg:flex'}`}>
-          <Link to="/" className="text-2xl font-bold text-blue-500">
-            1930 Help-Line.
+          <Link to="/" className="text-3xl font-extrabold text-indigo-600">
+            1930 HelpLine.
           </Link>
           <button
-            className="lg:hidden px-2 py-1 text-blue-500 border rounded border-blue-500"
+            className="lg:hidden px-2 py-1 text-blue-700 border rounded border-blue-500"
             type="button"
             onClick={toggleMobileMenu}
           >
             Menu
           </button>
-          <div className={`lg:flex space-x-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-            <Link to="/" className="text-blue-500">
+          <div className={`lg:flex space-x-12 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+            <Link to="/" className="text-blue-700">
               Home
             </Link>
-            <Link to="/aboutus" className="text-blue-500">
+            <Link to="/aboutus" className="text-blue-700">
               About Us
             </Link>
             <div className="group relative">
               <button
-                className="text-blue-500 group-hover:bg-gray-200"
+                className="text-blue-700 group-hover:bg-gray-200"
                 onClick={toggleServicesDropdown}
               >
                 Services
@@ -73,7 +73,7 @@ export default function Navbar() {
               Our Team
             </Link>
             <Link to="/blog" className="text-blue-500">
-              Blog
+              Report a Cyber Fraud
             </Link>
           </div>
           <div className="group relative">

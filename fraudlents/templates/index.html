@@ -1,0 +1,97 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Site Checker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            color: #333;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Phishing Site Checker</h1>
+    <form action="/predict" method="get" id="predictForm">
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" name="url" value="{{ url }}" required>
+        <button type="button" onclick="checkPhishing()">Check Phishing</button>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+
+    <script>
+        // Check if the page was reloaded
+        if (performance.navigation.type == 1) {
+            // Redirect to /predict after a reload
+            window.location.href = '/predict' + encodeURIComponent(document.getElementById('url').value);
+        }
+
+        function checkPhishing() {
+            // Optionally, you can submit the form to trigger the backend processing
+            document.getElementById('predictForm').submit();
+        }
+    </script>
+</body>
+</html>

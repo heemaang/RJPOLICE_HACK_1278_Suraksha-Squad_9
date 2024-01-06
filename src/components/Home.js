@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Navbar from "./screens/Navbar";
@@ -22,6 +23,21 @@ export default function Home(props) {
     // Assuming you want to redirect to "/flaskfor/standalone-frontend/base.html"
     window.location.href = './flaskfor/standalone-frontend/base.html';
   };
+=======
+import React from "react";
+import Navbar from "./Navbar";
+import { useNavigate } from 'react-router-dom';
+import Accordion from "./Accordion";
+import Contact from "./Contact";
+import Footer from "./Footer";
+// import { Link } from "react-router-dom";
+
+export default function Home(props) {
+  const navigate = useNavigate();
+    const handleHTML = () => {
+      navigate("/flaskfor/standalone-frontend/base.html");
+    };
+>>>>>>> a9a788675e23522876342032068c908646e00456
   return (
     <div>
       <Navbar />
@@ -56,6 +72,7 @@ export default function Home(props) {
       <div class="p-6 rounded-md shadow-md flex flex-col">
       <div class="border border-stroke rounded-md px-10 py-10 m-auto bg-white">
         <h1 class="my-3 font-extrabold text-2xl">AI Legal Decision Taking System</h1>
+<<<<<<< HEAD
         <h1 class="w-full text-[18px] leading-6 text-gray-600 text-justify pt-2">Empower your legal decisions with our AI-driven system. Connect with specialized lawyers and navigate complexities effortlessly.Secure, and personalized legal guidance at your fingertips..</h1>
         <button
           className="mt-5 w-full bg-gradient-to-r from-blue-600 p-3 shadow-2xl rounded-xl text-white font-bold to-indigo-600 hover:via-indigo-900 hover:to-blue-700"
@@ -68,6 +85,11 @@ export default function Home(props) {
         </button>
         <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
           </div>
+=======
+        <h1 class="w-full text-[18px] leading-6 text-gray-600 text-justify pt-2">Empower your legal decisions with our AI-driven system. Connect with specialized lawyers and navigate complexities effortlessly.Secure, and personalized legal guidance at your fingertips.</h1>
+        <button class="mt-5 w-full bg-gradient-to-r from-blue-600 p-3 shadow-2xl rounded-xl text-white font-bold to-indigo-600 hover:via-indigo-900 hover:to-blue-700">I have met a Cyber Crime</button>
+      </div>
+>>>>>>> a9a788675e23522876342032068c908646e00456
       <div class="hidden relative lg:block p-6 lg:col-span-2">
         <img class="absolute inset-0 w-full h-full object-cover object-center" src="/images/img-1.png" alt="Ad- woman on a beach"/>
       </div>
@@ -79,8 +101,13 @@ export default function Home(props) {
       <div class="p-6 rounded-md shadow-md flex flex-col">
       <div class="border border-stroke rounded-md px-10 py-10 m-auto bg-white">
         <h1 class="my-3 font-extrabold text-2xl">Fraud Website FeedBack System</h1>
+<<<<<<< HEAD
         <h1 class="w-full text-[18px] leading-6 text-gray-600 text-justify pt-2">Combat fraud with our Feedback System. Report suspicious websites effortlessly, contributing to a safer online community. Your input strengthens our efforts against fraudulent activities.</h1>
         <a href="http://127.0.0.1:8000/predict"><button class="mt-5 w-full bg-gradient-to-r from-blue-600 p-3 shadow-2xl rounded-xl text-white font-bold to-indigo-600 hover:via-indigo-900 hover:to-blue-700">Check Fraudlents</button></a>
+=======
+        <h1 class="w-full text-[18px] leading-6 text-gray-600 text-justify pt-2">Combat fraud with our Feedback System. Report suspicious websites effortlessly, contributing to a safer online community. Your input strengthens our efforts against fraudulent activities</h1>
+        <button class="mt-5 w-full bg-gradient-to-r from-blue-600 p-3 shadow-2xl rounded-xl text-white font-bold to-indigo-600 hover:via-indigo-900 hover:to-blue-700">Check Websites</button>
+>>>>>>> a9a788675e23522876342032068c908646e00456
       </div>
       <div class="hidden relative lg:block p-6 lg:col-span-2">
         <img class="absolute inset-0 w-full h-full object-cover object-center" src="/images/img-1.png" alt="Ad- woman on a beach"/>
