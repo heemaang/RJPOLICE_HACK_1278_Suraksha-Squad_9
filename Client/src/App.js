@@ -4,10 +4,12 @@ import { BrowserRouter as Router, Route, Routes, Switch } from "react-router-dom
 import Home from './components/screens/Home';
 import Lawyerdashboard from './components/screens/Lawyerdashboard';
 import LawyerRegister from './components/screens/LawyerRegister';
-import LawyerLogin from './components/screens/Login';
+import LawyerLogin from './components/screens/LawyerLogin';
+import Login from './components/screens/Login';
 import { Button, Dropdown } from 'semantic-ui-react';
 import ChatBot from 'react-simple-chatbot';
 import axios from 'axios';
+import ComplaintAnony from './components/screens/ComplaintAnony';
 
 const steps = [
   {
@@ -577,6 +579,8 @@ function App() {
         <Route path='/Lawyerdashboard' element={<Lawyerdashboard/>} />
         <Route path='/LawyerRegister' element={<LawyerRegister/>} />
         <Route path='/LawyerLogin' element={<LawyerLogin/>} />
+        <Route path='/Login' element={<Login/>}/>
+        <Route path='/ComplaintAnony' element={<ComplaintAnony/>}/>
       </Routes>
     </Router>
     <div style={{ position: 'fixed', bottom: 20, right: 20, opacity: 150}}>

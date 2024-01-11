@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Footer from '../components/Footer';
+import Footer from './Footer';
 import axios from 'axios';
 
 const API_URL = "http://localhost:5000/api/users/login"; // Update with your actual login endpoint

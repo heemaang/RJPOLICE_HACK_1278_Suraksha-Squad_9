@@ -246,13 +246,13 @@ function LawyerRegister() {
     </div> */}
 
 
-<button
+        <Link to="/Lawyerlogin"
           className="flex w-full justify-center text-white rounded-md bg-blue-900 p-3 mt-6 font-medium"
           type="submit"
         >
           Submit Information
-        </button> 
-                <p>Already Have an Account? <Link to='/Lawyerlogin'>Sign In</Link></p>
+        </Link> 
+                <p>Already Have an Account? <Link to='/lawyerlogin'>Sign In</Link></p>
               </div>
             </form>
           </div>

@@ -45,11 +45,11 @@ function Navbar() {
                 </Link>
               </div>
           <button className="mr-4">Our Team</button>
-          <button className="">Report Complaint</button>
+          <button className="">For Women Safety</button>
         </div>
 
         <div className="hidden sm:flex sm:items-center">
-          <Link to="/login" className="font-semibold hover:bg-white border px-12 py-2 rounded-lg hover:text-blue-900 mr-4">LOGIN</Link>
+          <Link to="/login" className="font-semibold hover:bg-white border px-12 py-2 rounded-lg hover:text-blue-900 mr-4">LOGIN / SIGN UP</Link>
           <Link to="/lawyerregister" className="font-semibold hover:bg-white border px-12 py-2 rounded-lg hover:text-blue-900">REGISTER as LAWYER</Link>
         </div>
       </div>
