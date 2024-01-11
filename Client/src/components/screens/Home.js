@@ -25,23 +25,31 @@ function Home() {
 
     {/* Services Cards */}
     <div className='grid grid-cols-4 gap-4 mx-[147px] mt-[-80px]'>
+      <a href="http://127.0.0.1:8000/predict">
       <div className='border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1'>
-        <img className='h-[78%]' src="/images/fakeweb.svg" alt="" />
-        <a href="http://127.0.0.1:8000/predict"><button class="mt-5 w-full bg-gradient-to-r from-blue-600 p-3 shadow-2xl rounded-xl text-white font-bold to-indigo-600 hover:via-indigo-900 hover:to-blue-700">Check Fraudlents</button></a>
-        <p className='text-4xl text-center font-bold text-blue-900 mt-[-30px]'>Detect Fake Websites</p>
+        <img className='h-[80%] mb-2' src="/images/fakeweb.svg" alt="" />
+        {/* <a href="http://127.0.0.1:8000/predict"><button class="mt-5 w-full bg-gradient-to-r from-blue-600 p-3 shadow-2xl rounded-xl text-white font-bold to-indigo-600 hover:via-indigo-900 hover:to-blue-700">Check Fraudlents</button></a> */}
+        <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-30px]'>Detect Fake Websites</p>
       </div>
+      </a>
+      <a href="">
       <div className='border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1'>
-      <img className='h-[75%] mt-2' src="/images/creditcard.svg" alt="" />
-        <p className='text-4xl text-center font-bold text-blue-900 mt-[-30px]'>Detect Illegal Credit Cards</p>
+      <img className='mt-2 w-64 mb-2' src="/images/creditcard.svg" alt="" />
+        <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-30px]'>Detect Illegal Credit Cards</p>
       </div>
+      </a>
+      <a href="">
       <div className='border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1'>
-      <img className='h-[72%] ml-2 mb-3' src="/images/frozenfunds.svg" alt="" />
-        <p className='text-4xl text-center font-bold text-blue-900 mt-[-30px]'>Frozen Funds Recovery</p>
+      <img className='w-62 ml-2 mb-4' src="/images/frozenfunds.svg" alt="" />
+        <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-25px]'>Frozen Funds Recovery</p>
       </div>
+      </a>
+      <a href="">
       <div className='border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1'>
-      <img className='h-[80%] ml-5 mt-[-10px]' src="/images/lawyer.svg" alt="" />
-        <p className='text-4xl text-center font-bold text-blue-900 mt-[-30px]'>Personalised Lawyer Support</p>
+      <img className='w-52 ml-7 mb-3 mt-[-10px]' src="/images/lawyer.svg" alt="" />
+        <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-25px]'>Personalised Lawyer Support</p>
       </div>
+      </a>
     </div>
 
     {/* divider */}
