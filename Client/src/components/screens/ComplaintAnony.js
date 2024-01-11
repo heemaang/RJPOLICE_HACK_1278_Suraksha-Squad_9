@@ -1,9 +1,13 @@
 import React from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 function ComplaintAnony() {
   return (
-    <div>
-      <section class="text-gray-600 body-font relative px-[100px]">
+    <div className='bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 h-[100px] to-gray-900 rounded-b-2xl relative'>
+        <div className='relative'><Navbar/></div>
+
+      <section class="text-gray-600 body-font relative px-[100px] mt-20 mb-6">
   <div class="container m-6 flex flex-row">
     <div class="rounded-lg bg-gray-100 p-4 flex flex-col justify-start relative">
       <img src="/images/img-2.jpeg" className='w-full h-[500px]' alt="" srcset="" />
@@ -44,6 +48,7 @@ function ComplaintAnony() {
     </div>
   </div>
 </section>
+<Footer/>
     </div>
   )
 }

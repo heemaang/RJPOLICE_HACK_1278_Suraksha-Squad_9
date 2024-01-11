@@ -10,6 +10,7 @@ import { Button, Dropdown } from 'semantic-ui-react';
 import ChatBot from 'react-simple-chatbot';
 import axios from 'axios';
 import ComplaintAnony from './components/screens/ComplaintAnony';
+import Cyber from './components/Cyber';
 
 const steps = [
   {
@@ -581,6 +582,7 @@ function App() {
         <Route path='/LawyerLogin' element={<LawyerLogin/>} />
         <Route path='/Login' element={<Login/>}/>
         <Route path='/ComplaintAnony' element={<ComplaintAnony/>}/>
+        <Route path='/Cyber' element={<Cyber/>}/>
       </Routes>
     </Router>
     <div style={{ position: 'fixed', bottom: 20, right: 20, opacity: 150}}>

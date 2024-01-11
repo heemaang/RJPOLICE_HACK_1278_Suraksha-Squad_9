@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "semantic-ui-react";
 
 function Navbar() {
   const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -17,11 +18,11 @@ function Navbar() {
     <div className="container px-[147px] text-md text-white">
       <div className="flex items-center justify-between py-4">
         <div>
-          <button className='font-extrabold text-xl'>1930 HELPLINE.</button>
+          <Link to='' className='font-extrabold text-xl'>1930 HELPLINE.</Link>
         </div>
 
         <div className="hidden font-medium sm:flex gap-4 sm:items-center">
-          <button className="mr-4">What is 1930 </button>
+          <Link to='/cyber' className="mr-4">Cyber Security</Link>
           <button onClick={toggleServicesDropdown} className="font-semibold mr-4">Services</button>
           <div
                 className={`${
@@ -45,7 +46,17 @@ function Navbar() {
                 </Link>
               </div>
           <button className="mr-4">Our Team</button>
-          <button className="">For Women Safety</button>
+          <Button className="">Anonymous Complaint</Button>
+          <div className={`${
+                  isServicesDropdownOpen ? 'block' : 'hidden'
+                } absolute bg-white rounded shadow-md mt-60 ml-32 text-md`}>
+                  <Link to="/ai" className="block border hover:bg-gray-200 rounded-t-md px-4 py-2 text-blue-900">
+                  File a Complaint
+                </Link>
+                <Link to="/connect-lawyer" className="border block hover:bg-gray-200 px-4 py-2 text-blue-900">
+                  File Anonymous Complaint
+                </Link>
+          </div>
         </div>
 
         <div className="hidden sm:flex sm:items-center">
