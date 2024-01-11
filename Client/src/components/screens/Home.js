@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-    <div className='bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 rounded-b-2xl h-[410px] z-10 relative'>
+    <div className='bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 rounded-b-2xl h-[410px] relative'>
     <div className='relative'><Navbar/></div>
 
     {/* Hero Section */}

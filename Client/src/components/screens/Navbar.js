@@ -3,18 +3,12 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [isRegisterDropdownOpen, setRegisterDropdownOpen] = useState(false);
-
+  
 
   const toggleServicesDropdown = () => {
     setServicesDropdownOpen(!isServicesDropdownOpen);
-    setRegisterDropdownOpen(false);
   };
 
-  const toggleRegisterDropdown = () => {
-    setRegisterDropdownOpen(!isRegisterDropdownOpen);
-    setServicesDropdownOpen(false);
-  };
 
   return (
     <>
@@ -55,20 +49,8 @@ function Navbar() {
         </div>
 
         <div className="hidden sm:flex sm:items-center">
-          <Link to="/login" className="border border-indigo-800 rounded-md px-12 py-2 font-semibold mr-4">LOGIN</Link>
-          <button onClick={toggleRegisterDropdown} className="font-semibold hover:bg-white border px-12 py-2 rounded-lg hover:text-blue-900">REGISTER</button>
-          <div
-              className={`${
-                isRegisterDropdownOpen ? 'block' : 'hidden'
-              } absolute bg-white rounded shadow-md mt-32 w-44 ml-44 text-blue-900 font-medium`}
-            >
-              <Link to="/lawyerform" className="block hover:bg-gray-100 px-4 py-2 hover:rounded-t-md text-blue-900">
-                Lawyer
-              </Link>
-              <Link to="/login" className="block border hover:bg-gray-100 px-4 py-2 text-blue-900">
-                User
-              </Link>
-            </div>
+          <Link to="/login" className="font-semibold hover:bg-white border px-12 py-2 rounded-lg hover:text-blue-900 mr-4">LOGIN</Link>
+          <Link to="/lawyerregister" className="font-semibold hover:bg-white border px-12 py-2 rounded-lg hover:text-blue-900">REGISTER as LAWYER</Link>
         </div>
       </div>
     </div>
