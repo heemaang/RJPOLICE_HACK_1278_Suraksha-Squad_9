@@ -6,7 +6,7 @@ import Lawyerdashboard from './components/screens/Lawyerdashboard';
 import LawyerRegister from './components/screens/LawyerRegister';
 import LawyerLogin from './components/screens/LawyerLogin';
 import Login from './components/screens/Login';
-import { Button, Dropdown } from 'semantic-ui-react';
+import { Button, Dropdown, Modal } from 'semantic-ui-react';
 import ChatBot from 'react-simple-chatbot';
 import axios from 'axios';
 import ComplaintAnony from './components/screens/ComplaintAnony';
@@ -585,6 +585,7 @@ function App() {
         <Route path='/ComplaintAnony' element={<ComplaintAnony/>}/>
         <Route path='/Cyber' element={<Cyber/>}/>
         <Route path='/marquee' element={<Marquee/>}/>
+        <Route path='/modal' element={<Modal/>}/>
       </Routes>
     </Router>
     <div style={{ position: 'fixed', bottom: 20, right: 20, opacity: 150}}>
