@@ -32,6 +32,25 @@ function Modal({setPopUp}) {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper> */}
+      <div className='grid grid-cols-5 gap-3 px-12 justify-center'>
+          <div className='bg-gray-200 rounded-md h-[250px] w-[80%] mb-3'>
+            <div className='bg-white h-[120px] m-3'><img src="" alt="" /></div>
+
+            <div>
+              <p className='text-2xl font-bold text-center text-blue-900'>Mr. Landon Dalecki </p>
+              <p className='text-lg font-medium text-center text-blue-950'>Corporate Law, JD </p>
+            </div>
+          </div>
+
+          <div className='bg-gray-200 rounded-md h-[250px] w-[80%] mb-3'>
+            <div className='bg-white h-[120px] m-3'><img src="" alt="" /></div>
+
+            <div>
+              <p className='text-2xl font-bold text-center text-blue-900'>Mr. Landon Dalecki </p>
+              <p className='text-lg font-medium text-center text-blue-950'>Corporate Law, JD </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div className='flex justify-between px-5'>
         <button className='outline outline-1 w-full outline-blue-600 bg-blue-900 hover:bg-blue-700 text-white rounded-md py-2 px-12'
