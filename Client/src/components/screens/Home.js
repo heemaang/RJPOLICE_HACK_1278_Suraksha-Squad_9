@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { Link } from "react-router-dom";
+import Marquee from "../Marquee";
 
 function Home() {
   return (
@@ -54,6 +55,7 @@ function Home() {
 
     {/* divider */}
     <div className='px-6 mt-16'><img src="/images/divider.svg" alt="" /></div>
+    <Marquee/>
 
     {/* Get to know About Us */}
     <p className="font-bold text-right px-[147px] mt-32 text-blue-900 text-5xl">GET TO KNOW ABOUT US</p>

@@ -1,0 +1,23 @@
+.text-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+#marquee{
+    font-size: 25px; /* Set the size of*/
+    text-transform: uppercase;
+    color: blue;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #fff;
+    /* white-space: nowrap; */
+    padding: 0rem;
+    letter-spacing: 1px;
+    animation: move-rtl 6000ms linear infinite;
+}
+
+@keyframes move-rtl {
+    0%   { transform: translateX(-100%) ; }
+    100% { transform: translateX(100%)  ; }
+
+    
+}

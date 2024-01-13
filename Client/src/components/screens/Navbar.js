@@ -4,10 +4,14 @@ import { Button } from "semantic-ui-react";
 
 function Navbar() {
   const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [isComplaintDropdownOpen, setComplaintDropdownOpen] = useState(false);
   
 
   const toggleServicesDropdown = () => {
     setServicesDropdownOpen(!isServicesDropdownOpen);
+  };
+  const toggleComplaintDropdown = () => {
+    setComplaintDropdownOpen(!isComplaintDropdownOpen);
   };
 
 
@@ -46,10 +50,10 @@ function Navbar() {
                 </Link>
               </div>
           <button className="mr-4">Our Team</button>
-          <Button className="">Anonymous Complaint</Button>
+          <button onClick={toggleComplaintDropdown} className="">Anonymous Complaint</button>
           <div className={`${
-                  isServicesDropdownOpen ? 'block' : 'hidden'
-                } absolute bg-white rounded shadow-md mt-60 ml-32 text-md`}>
+                  isComplaintDropdownOpen ? 'block' : 'hidden'
+                } absolute bg-white rounded shadow-md mt-32 ml-96 text-md`}>
                   <Link to="/ai" className="block border hover:bg-gray-200 rounded-t-md px-4 py-2 text-blue-900">
                   File a Complaint
                 </Link>

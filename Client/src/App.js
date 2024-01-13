@@ -11,6 +11,7 @@ import ChatBot from 'react-simple-chatbot';
 import axios from 'axios';
 import ComplaintAnony from './components/screens/ComplaintAnony';
 import Cyber from './components/Cyber';
+import Marquee from './components/Marquee';
 
 const steps = [
   {
@@ -583,6 +584,7 @@ function App() {
         <Route path='/Login' element={<Login/>}/>
         <Route path='/ComplaintAnony' element={<ComplaintAnony/>}/>
         <Route path='/Cyber' element={<Cyber/>}/>
+        <Route path='/marquee' element={<Marquee/>}/>
       </Routes>
     </Router>
     <div style={{ position: 'fixed', bottom: 20, right: 20, opacity: 150}}>
