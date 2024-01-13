@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useState} from 'react'
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import 'swiper/css';
 // import 'swiper/css/pagination';
@@ -32,7 +32,7 @@ function Modal({setPopUp}) {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper> */}
-      <div className='grid grid-cols-5 gap-3 px-12 justify-center'>
+      <div className='grid grid-cols-5 gap-3  px-12 justify-center'>
           <div className='bg-gray-200 rounded-md h-[250px] w-[80%] mb-3'>
             <div className='bg-white h-[120px] m-3'><img src="" alt="" /></div>
 
