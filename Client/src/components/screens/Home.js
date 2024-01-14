@@ -25,7 +25,7 @@ function Home() {
             <h1 className="text-5xl text-white mt-4 leading-[60px] font-bold text-left">Protect Against Cyber Crime and</h1>
             <div className="grid grid-cols-2">
               <div className="mt-12 w-full">
-                <Link to='/AdminDash' className="w-full px-20 py-3 rounded-md border bg-white text-blue-900 font-semibold text-lg">File a Complaint</Link>
+                <Link to='' className="w-full px-20 py-3 rounded-md border bg-white text-blue-900 font-semibold text-lg">File a Complaint</Link>
               </div>
               <div className="mt-12 ">
                 <Link className="px-12 py-3 rounded-md w-full border text-blue-900 bg-white font-semibold text-lg">Connect via Whatsapp</Link>
@@ -39,10 +39,10 @@ function Home() {
         
 
         {/* Two main Cards AI Legal And Lawyer Support */}
-        <div className="grid grid-cols-3 gap-4 mx-[147px] mt-[-80px]">
-          <Link className="grid col-span-2 h-[350px]"> 
+        <div className="grid grid-cols-3 gap-4 mx-[250px] mt-[-80px]">
+          <Link className="grid col-span-2 h-[250px]"> 
           <div className="border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1">
-          <p className='text-4xl mb-4 text-center font-bold text-blue-900'>AI Legal Decision Taking System</p>
+          <p className='text-4xl mb-4 mt-3 text-center font-bold text-blue-900'>AI Legal Decision Taking System</p>
           </div>
           </Link>
 

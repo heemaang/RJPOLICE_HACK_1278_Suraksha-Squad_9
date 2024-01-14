@@ -25,8 +25,8 @@ function Navbar() {
           <Link to='' className='font-extrabold text-xl'>1930 HELPLINE.</Link>
         </div>
 
-        <div className="hidden font-medium sm:flex gap-4 sm:items-center">
-          <Link to='/cyber' className="mr-4">Cyber Security</Link>
+        <div className="font-medium sm:flex gap-4 sm:items-center">
+          <Link to='/cyber' className="mr-4">Cyber Insights</Link>
           <button onClick={toggleServicesDropdown} className="font-semibold mr-4">Services</button>
           <div
                 className={`${
@@ -50,7 +50,7 @@ function Navbar() {
                 </Link>
               </div>
           <button className="mr-4">Our Team</button>
-          <button onClick={toggleComplaintDropdown} className="">Anonymous Complaint</button>
+          <button onClick={toggleComplaintDropdown} className="">Complaint Now</button>
           <div className={`${
                   isComplaintDropdownOpen ? 'block' : 'hidden'
                 } absolute bg-white rounded shadow-md mt-32 ml-96 text-md`}>

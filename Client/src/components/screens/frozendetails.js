@@ -22,11 +22,11 @@ const FrozenDetails = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Frozen Funds Details</h2>
+    <div className='p-5 w-full'>
+      <h2 className='text-blue-900 w-full font-bold text-xl py-4 px-4 border'>Frozen Funds Details</h2>
       <table>
         <thead>
-          <tr>
+          <tr className='border-b p-3'>
             <th>Name</th>
             <th>Email</th>
             <th>Aadhaar Card Number</th>

@@ -58,7 +58,7 @@ function AdminDash() {
                 <div>
                     <Sidebar onLawyerClick={showLawyerDetailsView} onFrozenFundsClick={showFrozenDetailsView}  />
         </div>
-        <div>
+        <div className='col-span-3'>
           {/* Conditional rendering of LawyersDetails */}
           {showLawyerDetails && <LawyersDetails />}
           {showFrozenDetails && <FrozenDetails />}

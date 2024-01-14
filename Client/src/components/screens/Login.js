@@ -98,20 +98,20 @@ const Login = () => {
     <div className="flex">
       <div className="w-3/5">
         <img
-          className="h-100 mt-11 w-39"
+          className="h-100 mt-11 w-39 p-6"
           src="./images/home.jpg"
           alt="loginpage"
         />
       </div>
 
       <div className="w-1/2 h-full ">
-        <div className="mt-32">
-          <h1 className="text-center font-poppins not-italic font-[700] leading-9 text-[#232E40] text-[64px] ml-[-11rem] mb-5">
+        <div className="mt-28">
+          <h1 className="text-center font-poppins not-italic font-[700] leading-9 text-blue-900 text-[64px] ml-[-10rem] mb-5">
             1930-Helpline.
           </h1>
           <p className=" ml-[-11rem] text-center text-[#556987] font-poppins not-italic text-[18px] leading-7 font-medium">Discover a platform designed to streamline legal decision-making..</p>
         </div>
-        <form onSubmit={(e) => e.preventDefault()} className="text-center ">
+        <form onSubmit={(e) => e.preventDefault()} className="text-center ms-5">
           {!isSignInForm && (
             <input
               ref={name}
@@ -119,7 +119,7 @@ const Login = () => {
               required
               placeholder="Full Name"
               className=" bg-gray-100 
-          rounded-lg p-[12px] m-[10px] w-[20rem] ml-[-10rem] font-['Poppins'] font-medium"
+          rounded-lg p-[12px] m-[10px] mt-3 w-[74%] border ml-[-10rem] font-['Poppins'] font-medium"
             />
           )}
 
@@ -145,7 +145,7 @@ const Login = () => {
 
           <p className="text-red-500 font-bold py-2 font-['Poppins']">{errorMessage} </p>
           <button
-            className="font-poppins bg-indigo-800 p-[12px] ml-[-10rem] m-[10px] w-[30rem] rounded-md  text-[#F0FDF4] font-poppins text-md font-medium leading-[24px]"
+            className="font-poppins bg-blue-900 p-[12px] ml-[-10rem] m-[10px] w-[30rem] rounded-md  text-[#F0FDF4] font-poppins text-md font-medium leading-[24px]"
             onClick={handleButtonClick}
           >
             {isSignInForm ? "Sign in" : "Sign up"}
@@ -160,7 +160,7 @@ const Login = () => {
               />
               <p className=" font-poppins font-medium mt-[-25px]">Sign in with Google</p>
             </button>
-            <p className="py-4 cursor-pointer  font-poppins font-medium p-[12px] mt[-1remx] w-[20rem] ml-[7rem] " onClick={toggleSignInForm}>
+            <p className="py-4 cursor-pointer font-poppins font-medium w-[20rem] ml-20 mt-[-22px]" onClick={toggleSignInForm}>
               {isSignInForm
                 ? " New to 1930 Helpline ? Sign Up Now"
                 : "Already have an account? Sign in"}

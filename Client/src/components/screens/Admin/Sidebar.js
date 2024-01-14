@@ -4,7 +4,7 @@ import { FaTachometerAlt,FaRegUser, FaHandHoldingUsd, FaRegSun, FaWrench, FaStic
 
 function Sidebar({ onLawyerClick, onFrozenFundsClick }) {
   return (
-    <div className='bg-blue-900 px-[25px] h-screen'>
+    <div className='bg-blue-900 px-[25px] h-full'>
     <div className='px-[15px] py-[30px] flex items-center justify-center border-b-[1px] border-[#EDEDED]/[0.3]'>
         <h1 className='text-white text-[20px] leading-[24px] font-extrabold cursor-pointer'>Admin Dashboard</h1>
     </div>
