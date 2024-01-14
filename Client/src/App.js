@@ -12,6 +12,9 @@ import axios from 'axios';
 import ComplaintAnony from './components/screens/ComplaintAnony';
 import Cyber from './components/Cyber';
 import Marquee from './components/Marquee';
+import Sidebar from './components/screens/Admin/Sidebar';
+import AdminDash from './components/screens/Admin/AdminDash';
+import AdminLogin from './components/screens/Admin/AdminLogin';
 
 const steps = [
   {
@@ -527,6 +530,7 @@ const ChatBotComponent = () => {
     }
   }, [trigger]);
   return(
+    
   <ChatBot
     steps={steps}
     floating={true} // This makes the chatbot floating
@@ -535,6 +539,7 @@ const ChatBotComponent = () => {
     //botAvatar="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" // Set your own avatar image
     trigger={trigger}
     handleEnd={() => setTrigger(null)} 
+    className="bg-blue-800 font-bold absolute left-0 top-0 "
   />
 );
 };
@@ -586,9 +591,12 @@ function App() {
         <Route path='/Cyber' element={<Cyber/>}/>
         <Route path='/marquee' element={<Marquee/>}/>
         <Route path='/modal' element={<Modal/>}/>
+        <Route path='/Sidebar' element={<Sidebar/>}/>
+        <Route path='/AdminDash' element={<AdminDash/>}/>
+        <Route path='/AdminLogin' element={<AdminLogin/>}/>
       </Routes>
     </Router>
-    <div style={{ position: 'fixed', bottom: 20, right: 20, opacity: 150}}>
+    <div style={{ position: 'fixed', bottom: 20, right: 50, opacity: 150}}>
           <Button onClick={handleChatBotToggle} primary>
             <img
               src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"

@@ -8,6 +8,7 @@ import Modal from "./Modal";
 import Accordion from 'react-bootstrap/Accordion';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import './Services.css';
 
 
 function Home() {
@@ -22,12 +23,12 @@ function Home() {
         <div className="grid grid-cols-2 gap-4">
           <div className="ml-[147px]">
             <h1 className="text-5xl text-white mt-4 leading-[60px] font-bold text-left">Protect Against Cyber Crime and</h1>
-            <div className="grid grid-cols-2 gap-2">
-              <div>
-                <button className="py-3 mt-5 rounded-md w-full border bg-white text-blue-900 font-semibold text-lg">File a Complaint</button>
+            <div className="grid grid-cols-2">
+              <div className="mt-12 w-full">
+                <Link to='/AdminDash' className="w-full px-20 py-3 rounded-md border bg-white text-blue-900 font-semibold text-lg">File a Complaint</Link>
               </div>
-              <div>
-                <button className="py-3 mt-5 rounded-md w-full border text-blue-900 bg-white font-semibold text-lg">Connect via Whatsapp</button>
+              <div className="mt-12 ">
+                <Link className="px-12 py-3 rounded-md w-full border text-blue-900 bg-white font-semibold text-lg">Connect via Whatsapp</Link>
               </div>
             </div>
           </div>
@@ -35,38 +36,63 @@ function Home() {
             <img className='h-[90%]' src="/images/main.svg" alt="" srcset="" />
           </div>
         </div>
+        
 
-        {/* Services Cards */}
-        <div className="grid grid-cols-4 gap-4 mx-[147px] mt-[-80px]">
-          <Link to="/predict">
-            <div className='border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1'>
-              <img className='h-[80%] mb-2' src="/images/fakeweb.svg" alt="" />
-              {/* <a href="http://127.0.0.1:8000/predict"><button class="mt-5 w-full bg-gradient-to-r from-blue-600 p-3 shadow-2xl rounded-xl text-white font-bold to-indigo-600 hover:via-indigo-900 hover:to-blue-700">Check Fraudlents</button></a> */}
-              <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-30px]'>Detect Fake Websites</p>
-            </div>
-          </Link>
-          <Link to="/">
-            <div className='border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1'>
-              <img className='mt-2 w-64 mb-2' src="/images/creditcard.svg" alt="" />
-              <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-30px]'>Detect Illegal Credit Cards</p>
-            </div>
-          </Link>
-          <Link to="/">
-            <div className='border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1'>
-              <img className='w-62 ml-2 mb-4' src="/images/frozenfunds.svg" alt="" />
-              <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-25px]'>Frozen Funds Recovery</p>
-            </div>
-          </Link>
-          <div>
-            <button onClick={() => setPopUp(true)}>
-              <div className='border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1'>
-                <img className='w-52 ml-7 mb-3 mt-[-10px]' src="/images/lawyer.svg" alt="" />
-                <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-25px]'>Personalised Lawyer Support</p>
-              </div>
-            </button>
-            {popUp && <Modal setPopUp= {setPopUp} />}
+        {/* Two main Cards AI Legal And Lawyer Support */}
+        <div className="grid grid-cols-3 gap-4 mx-[147px] mt-[-80px]">
+          <Link className="grid col-span-2 h-[350px]"> 
+          <div className="border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1">
+          <p className='text-4xl mb-4 text-center font-bold text-blue-900'>AI Legal Decision Taking System</p>
           </div>
+          </Link>
+
+          <button onClick={() => setPopUp(true)}>
+          <div className="border-1 border-blue-800 rounded-2xl hover:shadow-2xl hover:translate-y-1">
+          <img className='h-[80%] mb-2' src="/images/main.svg" alt="" />
+          <p className='text-4xl mb-4 text-center font-bold text-blue-900 mt-[-30px]'>Personalised Lawyer Support</p>
+          </div>
+          </button>
+          {popUp && <Modal setPopUp= {setPopUp} />}
         </div>
+
+        {/* Empty div to enter text */}
+        <div className="bg-blue-800 h-5 mx-[147px] mt-4">
+
+        </div>
+
+        {/* Trial Card System */}
+        <div className="services mb-5 grid grid-cols-3 gap-4 mt-3">
+        
+  <Link to="/predict" class="card2">
+    <div class="content2">
+    <img src="/images/main.svg" alt="" />
+      <div class="h6">AI Fake Website Detection</div>
+      <div class="hover_content2">
+        <p>mParticle’s customer data platform empowers you to Integrate all of your data and orchestrate it across channels, partners, and systems.</p>
+      </div>
+    </div>
+  </Link>
+  <Link class="card2">
+    <div class="content2">
+    <img src="/images/main.svg" alt="" />
+      <div class="h6">AI Illegal Credit Card Detetction</div>
+      <div class="hover_content2">
+        <p>mParticle’s customer data platform empowers you to Integrate all of your data and orchestrate it across channels, partners, and systems.</p>
+      </div>
+    </div>
+  </Link>
+  <Link class="card2">
+    <div class="content2">
+    <img src="/images/main.svg" alt="" />
+      <div class="h6">Automated Frozen Funds Recovery</div>
+      <div class="hover_content2">
+        <p>mParticle’s customer data platform empowers you to Integrate all of your data and orchestrate it across channels, partners, and systems.</p>
+      </div>
+    </div>
+  </Link>
+        </div>
+
+        
 
         {/* divider */}
         <div className='px-6 mt-16'><img src="/images/divider.svg" alt="" /></div>
@@ -78,6 +104,23 @@ function Home() {
           <div className='mt-[-70px]'><img className="" src="/images/know.svg" alt="" /></div>
           <div className='col-span-2'>
             <p className='mt-12 text-justify px-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda possimus saepe deleniti blanditiis natus dolor, magnam sapiente, similique illo nihil illum tenetur quia explicabo minus, nostrum tempora? Amet iste atque odit numquam distinctio fugiat velit harum accusamus quia rerum. Dolorem quidem doloribus vitae suscipit quam necessitatibus sed veniam iste amet harum? Ducimus adipisci illo similique cupiditate ullam iure assumenda vero maiores aut. Quam saepe laboriosam, architecto adipisci distinctio quasi, iure, reiciendis quo ea iste fuga magni dolores sed aliquid doloremque. Quas sapiente atque officia officiis voluptas saepe eveniet maxime debitis iure corrupti facilis perferendis a ullam eum recusandae, ex reiciendis?</p>
+          </div>
+        </div>
+
+        {/* Buttons to File Complaint */}
+        <div className="grid grid-cols-3 mx-[147px] gap-4 border-1 rounded-md p-12 border-blue-900">
+          <div className="grid grid-rows-6 gap-3">
+            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Phishing Fraud</button>
+            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Identity Theft</button>
+            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Online Fraud</button>
+            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Ransomware Attacks</button>
+            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Child Exploitation</button>
+            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Cyberbullying</button>
+          </div>
+          <div className="bg-gray-100 col-span-2">
+            <div className="p-4">
+              kjfbhsyudg
+            </div>
           </div>
         </div>
 

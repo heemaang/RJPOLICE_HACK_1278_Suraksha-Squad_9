@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Navbar2 from './Navbar'
+import Navbar2 from './Navbar2'
 import Footer from './Footer'
 import axios from 'axios';
 
@@ -59,11 +59,7 @@ function Lawyerdashboard() {
         {lawyerData && (<div className='bg-white col-span-2 m-6 p-3 rounded-lg'>
             <p className='text-3xl border-2 p-4 font-bold mb-3 text-blue-900'>Personal Information</p>
             <div className='text-lg'>
-            
-            {lawyerData.map(item => (
-        <div key={item._id}>{/* Render your data here */}</div>
-      ))}
-
+            <p><strong>ID:</strong> {lawyerData._id ? lawyerData._id.toString() : lawyerData.id}</p>
             <p><strong>Name:</strong> {lawyerData.name}</p>
             <p><strong>Bar Association Number:</strong> {lawyerData.barAssociationNumber}</p>
             <p><strong>Legal Specialization:</strong> {lawyerData.legalSpecialization}</p>

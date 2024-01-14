@@ -1,0 +1,105 @@
+.services {
+    margin-inline: 147px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card2 {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 20em;
+    max-width: 80%;
+    padding: 2em 0;
+    background: #FFF;
+    box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
+    transition: all 0.35s ease;
+  }
+  
+  .card2::before, .card2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: darkblue;
+    height: 4px;
+  }
+  
+  .card2::before {
+    width: 10;
+    opacity: 0;
+    transition: opacity 0 ease, width 0 ease;
+    transition-delay: 0.5s;
+  }
+  
+  .card2::after {
+    width: 100%;
+    background: white;
+    transition: width 0.5s ease;
+  }
+  
+  .card2 .content2 {
+    width: 20em;
+    max-width: 80%;
+    margin:  15px;
+  }
+  
+  .card2 .logo2 {
+    margin: 0 0 1em;
+    width: 10.625em;
+    transition: all 0.35s ease;
+  }
+  
+  .card2 .h6 {
+    color: #999;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  
+  .card2 .hover_content2 {
+    overflow: hidden;
+    max-height: 0;
+    transform: translateY(1em);
+    transition: all 0.55s ease;
+  }
+  
+  .card2 .hover_content2 p {
+    margin: 1.5em 0 0;
+    color: #6E6E70;
+    line-height: 1.4em;
+  }
+  
+  .card2:hover {
+    width: 24em;
+    box-shadow: 0 10px 20px 0 rgba(32, 32, 36, 0.12);
+  }
+  
+  .card2:hover::before {
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+    transition-delay: 0;
+  }
+  
+  .card2:hover::after {
+    width: 0;
+    opacity: 0;
+    transition: width 0 ease;
+  }
+  
+  .card2:hover .logo2 {
+    margin-bottom: 0.5em;
+  }
+  
+  .card2:hover .hover_content2 {
+    max-height: 10em;
+    transform: none;
+  }
+
+
+  

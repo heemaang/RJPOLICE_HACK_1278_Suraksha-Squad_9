@@ -2,6 +2,7 @@ const UserProfile =  require("../models/UserProfile.js");
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcryptjs");
 
+
 const { generateToken } = require("../utils/generateJwt");
 
 const User = require("../models/userModel");
@@ -157,5 +158,9 @@ const getCurrentUser = asyncHandler(async (req, res) => {
 
 
 
+const getAllLawyers = asyncHandler(async (req, res) => {
+  const lawyers = await User.find({}, '-password');
+  res.json(lawyers);
+});
 
-module.exports = { registerUser, loginUser, getCurrentUser };
+module.exports = { registerUser, loginUser, getCurrentUser, getAllLawyers };

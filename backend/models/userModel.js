@@ -5,7 +5,7 @@ const userSchema = mongoose.Schema(
     name: {
       type: String,
       required: true,
-      min: 1,
+      min: 4,
     },
     email: {
       type: String,
@@ -15,7 +15,7 @@ const userSchema = mongoose.Schema(
     password: {
       type: String,
       required: true,
-      min: 1,
+      min: 12,
     },
     // repassword: {
     //   type: String,
@@ -25,12 +25,12 @@ const userSchema = mongoose.Schema(
     barAssociationNumber: {
       type: Number,
       required: true,
-      min: 1,
+      min: 12,
     },
     legalSpecialization: {
       type: String,
       required: true,
-      min: 1,
+      min: 12,
     },
     yearsOfPractice: {
       type: Number,
@@ -40,63 +40,63 @@ const userSchema = mongoose.Schema(
     lawSchoolAttended: {
       type: String,
       required: true,
-      minlength: 1,
+      minlength: 10,
     },
     professionalCertifications: {
       type: String,
       //required: true,
-      min: 1,
+      min: 12,
     },
     lawFirm: {
       type: String,
       required: true,
-      min: 1,
+      min: 12,
     },
     officeAddress: {
       type: String,
       required: true,
-      min: 1,
+      min: 25,
     },
     contactNumber: {
       type: Number,
       required: true,
-      min: 1,
+      min: 11,
       unique: true,
     },
     areasOfPractice: {
       type: String,
       required: true,
-      min: 1,
+      min: 50,
       //unique: true,
     },
     linkedinProfile: {
       type: String,
       required: true,
-      min: 1,
+      min: 50,
       //unique: true,
     },
     lawFirmWebsite: {
       type: String,
       required: true,
-      min: 1,
+      min: 50,
       //unique: true,
     },
     preferredContactHours: {
       type: Number,
       required: true,
-      min: 1,
+      min: 5,
       //unique: true,
     },
     consultationAvailability: {
       type: Number,
       required: true,
-      min: 1,
+      min: 5,
       //unique: true,
     },
     bio: {
       type: String,
       //required: true,
-      min: 1,
+      min: 100,
       //unique: true,
     },
     
