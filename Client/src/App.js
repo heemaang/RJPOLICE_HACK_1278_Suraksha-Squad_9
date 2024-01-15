@@ -15,6 +15,8 @@ import Marquee from './components/Marquee';
 import Sidebar from './components/screens/Admin/Sidebar';
 import AdminDash from './components/screens/Admin/AdminDash';
 import AdminLogin from './components/screens/Admin/AdminLogin';
+import Complaint from './components/screens/Complaint';
+import { db } from './components/firebase';
 
 const steps = [
   {
@@ -594,6 +596,7 @@ function App() {
         <Route path='/Sidebar' element={<Sidebar/>}/>
         <Route path='/AdminDash' element={<AdminDash/>}/>
         <Route path='/AdminLogin' element={<AdminLogin/>}/>
+        <Route path='/Complaint' element={<Complaint db={db}/>}/>
       </Routes>
     </Router>
     <div style={{ position: 'fixed', bottom: 20, right: 50, opacity: 150}}>

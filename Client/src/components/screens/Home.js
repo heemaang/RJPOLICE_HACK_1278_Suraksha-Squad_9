@@ -13,6 +13,17 @@ import './Services.css';
 
 function Home() {
   const [popUp, setPopUp] = useState(false);
+  const [popupContent, setPopupContent] = useState('');
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const handleButtonClick = (content) => {
+    setPopupContent(content);
+    setPopupOpen(true);
+  };
+
+  const handlePopupClose = () => {
+    setPopupOpen(false);
+  };
 
   return (
     <div>
@@ -25,7 +36,7 @@ function Home() {
             <h1 className="text-5xl text-white mt-4 leading-[60px] font-bold text-left">Protect Against Cyber Crime and</h1>
             <div className="grid grid-cols-2">
               <div className="mt-12 w-full">
-                <Link to='' className="w-full px-20 py-3 rounded-md border bg-white text-blue-900 font-semibold text-lg">File a Complaint</Link>
+                <Link to='/Complaint' className="w-full px-20 py-3 rounded-md border bg-white text-blue-900 font-semibold text-lg">File a Complaint</Link>
               </div>
               <div className="mt-12 ">
                 <Link className="px-12 py-3 rounded-md w-full border text-blue-900 bg-white font-semibold text-lg">Connect via Whatsapp</Link>
@@ -109,14 +120,60 @@ function Home() {
 
         {/* Buttons to File Complaint */}
         <div className="grid grid-cols-3 mx-[147px] gap-4 border-1 rounded-md p-12 border-blue-900">
-          <div className="grid grid-rows-6 gap-3">
-            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Phishing Fraud</button>
-            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Identity Theft</button>
-            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Online Fraud</button>
-            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Ransomware Attacks</button>
-            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Child Exploitation</button>
-            <button className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">Cyberbullying</button>
+        <div className="grid grid-rows-6 gap-3">
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Phishing Fraud popup content goes here.')}
+      >
+        Phishing Fraud
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Identity Theft popup content goes here.')}
+      >
+        Identity Theft
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Online Fraud popup content goes here.')}
+      >
+        Online Fraud
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Ransomware Attacks popup content goes here.')}
+      >
+        Ransomware Attacks
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Child Exploitation popup content goes here.')}
+      >
+        Child Exploitation
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Cyberbullying popup content goes here.')}
+      >
+        Cyberbullying
+      </button>
+      {isPopupOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-75 flex items-center justify-center"
+          onClick={handlePopupClose}
+        >
+          <div className="bg-white p-6 rounded shadow-lg">
+            <div>{popupContent}</div>
+            <button
+              className="mt-4 p-2 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+              onClick={handlePopupClose}
+            >
+              Close
+            </button>
           </div>
+        </div>
+      )}
+    </div>
           <div className="bg-gray-100 col-span-2">
             <div className="p-4">
               kjfbhsyudg
