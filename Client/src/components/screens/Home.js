@@ -28,7 +28,7 @@ function Home() {
   return (
     <div>
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900 rounded-b-2xl h-[410px] relative">
-        <div className="relative"><Navbar /></div>
+        <div className="relative mt-[-5px]"><Navbar /></div>
 
         {/* Hero Section */}
         <div className="grid grid-cols-2 gap-4">
