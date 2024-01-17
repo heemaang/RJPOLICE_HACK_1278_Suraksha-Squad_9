@@ -70,7 +70,7 @@ function Lawyerdashboard() {
       </div>)}
 
       {/*Online Presence Section */}
-      {lawyerData && (<div className='grid grid-cols-3 gap-2 px-3'>
+      {lawyerData && (<div className='grid grid-cols-3 gap-2 px-3 w-[300%]'>
         <div className='bg-white rounded-md p-3 m-2'>
         <p className='text-3xl border-2 p-4 font-bold mb-3 text-blue-900'>Practice Details</p>
             <div className='text-lg'>
@@ -101,10 +101,12 @@ function Lawyerdashboard() {
 )}
       </div>
 
+      
+      </div>
       {/* Footer */}
       <Footer/>
-      </div>
     </div>
+    
     </div>
   )
 }

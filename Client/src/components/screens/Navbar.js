@@ -49,7 +49,7 @@ function Navbar() {
                   Connect me to Helpdesk
                 </Link>
               </div>
-          <button className="mr-4">Our Team</button>
+          
           <button onClick={toggleComplaintDropdown} className="">Complaint Hub</button>
           <div className={`${
                   isComplaintDropdownOpen ? 'block' : 'hidden'
