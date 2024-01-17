@@ -27,7 +27,7 @@ function Navbar() {
 
         <div className="font-medium sm:flex gap-4 sm:items-center">
           <Link to='/cyber' className="mr-4">Cyber Insights</Link>
-          <button onClick={toggleServicesDropdown} className="font-semibold mr-4">Services</button>
+          <button onClick={toggleServicesDropdown} className="font-semibold mr-4">Services </button>
           <div
                 className={`${
                   isServicesDropdownOpen ? 'block' : 'hidden'
@@ -50,7 +50,7 @@ function Navbar() {
                 </Link>
               </div>
           <button className="mr-4">Our Team</button>
-          <button onClick={toggleComplaintDropdown} className="">Complaint Now</button>
+          <button onClick={toggleComplaintDropdown} className="">Complaint Hub</button>
           <div className={`${
                   isComplaintDropdownOpen ? 'block' : 'hidden'
                 } absolute bg-white rounded shadow-md mt-32 ml-96 text-md`}>
