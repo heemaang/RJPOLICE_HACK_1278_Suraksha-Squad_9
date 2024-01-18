@@ -17,6 +17,10 @@ import AdminDash from './components/screens/Admin/AdminDash';
 import AdminLogin from './components/screens/Admin/AdminLogin';
 import Complaint from './components/screens/Complaint';
 import { db } from './components/firebase';
+import Ticketing from './components/screens/Ticketing';
+import FrozenFunds from './components/screens/FrozenFunds';
+import FrozenDetails from './components/screens/frozendetails';
+import AiBot from './components/screens/AiBot';
 
 const steps = [
   {
@@ -523,15 +527,15 @@ const ChatBotComponent = () => {
 
   const [trigger, setTrigger] = useState(null);
 
-  useEffect(() => {
-    if (trigger) {
-      // Use a delay to prevent rapid triggering of next step
-      setTimeout(() => {
-        setTrigger(null);
-      }, 100);
-    }
-  }, [trigger]);
-  return(
+  // useEffect(() => {
+  //   if (trigger) {
+  //     // Use a delay to prevent rapid triggering of next step
+  //     setTimeout(() => {
+  //       setTrigger(null);
+  //     }, 100);
+  //   }
+  // }, [trigger]);
+  // return(
     
   <ChatBot
     steps={steps}
@@ -543,24 +547,24 @@ const ChatBotComponent = () => {
     handleEnd={() => setTrigger(null)} 
     className="bg-blue-800 font-bold absolute left-0 top-0 "
   />
-);
+// );
 };
 
 function App() {
   // const [userName, setUserName] = useState("");
     const [showChatBot, setShowChatBot] = useState(false);
 
-  //   useEffect(() => {
-  //     const unsubscribe = auth.onAuthStateChanged((user) => {
-  //       if (user) {
-  //         setUserName(user.displayName);
-  //       } else {
-  //         setUserName("");
-  //       }
-  //     });
+    // useEffect(() => {
+    //   const unsubscribe = auth.onAuthStateChanged((user) => {
+    //     if (user) {
+    //       setUserName(user.displayName);
+    //     } else {
+    //       setUserName("");
+    //     }
+    //   });
 
-  //     return () => unsubscribe();
-  //   }, []);
+    //   return () => unsubscribe();
+    // }, []);
 
     const handleChatBotToggle = () => {
       setShowChatBot(!showChatBot);
@@ -569,7 +573,7 @@ function App() {
       const response = await axios.post('http://localhost:3000/api/sendMessage');
         console.log(response.data); // Check the response from the backend
       // Replace 'YOUR_PHONE_NUMBER' with the actual phone number
-      const phoneNumber = "9733057333";
+      const phoneNumber = "7764901179";
       
       // Replace 'YOUR_MESSAGE' with the desired pre-filled message
       const message = encodeURIComponent("Hello, I have a question.");
@@ -586,7 +590,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/> }/>
         <Route path='/Lawyerdashboard' element={<Lawyerdashboard/>} />
+        <Route path='/frozenfunds' element={<FrozenFunds/>} />
+        <Route path='/frozendetails' element={<FrozenDetails/>} />
         <Route path='/LawyerRegister' element={<LawyerRegister/>} />
+        <Route path='/ticketing' element={<Ticketing/>} />
         <Route path='/LawyerLogin' element={<LawyerLogin/>} />
         <Route path='/Login' element={<Login/>}/>
         <Route path='/ComplaintAnony' element={<ComplaintAnony/>}/>
@@ -595,6 +602,7 @@ function App() {
         <Route path='/modal' element={<Modal/>}/>
         <Route path='/Sidebar' element={<Sidebar/>}/>
         <Route path='/AdminDash' element={<AdminDash/>}/>
+        <Route path='/aibot' element={<AiBot/>}/>
         <Route path='/AdminLogin' element={<AdminLogin/>}/>
         <Route path='/Complaint' element={<Complaint db={db}/>}/>
       </Routes>
