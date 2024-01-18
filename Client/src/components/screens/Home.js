@@ -715,6 +715,11 @@ function Home() {
         <Marquee />
 
         {/* Get to know About Us */}
+        <p className="font-bold text-right px-[147px] mt-32 text-blue-900 text-5xl">GET TO KNOW ABOUT US</p>
+        <div className='grid grid-cols-3 gap-1 px-[100px]'>
+          <div className='mt-[-70px]'><img className="" src="/images/know.svg" alt="" /></div>
+          <div className='col-span-2'>
+            <p className='mt-12 text-justify px-5'>"Welcome to 1930, where technological prowess meets legal finesse. As a beacon in the digital realm, we are your premier destination for AI-infused solutions, offering an unparalleled convergence of cyber expertise, cognitive guidance, and adaptive security. Explore a realm of advanced tools, from legal decision support to automated recovery, meticulously crafted to fortify your digital resilience. Join us on a journey of empowerment, understanding, and unwavering protection against the evolving landscape of cyber threats. At 1930, your safety is our priority, and your digital well-being is our commitment."</p>
         <p className="font-bold text-right px-[147px] mt-32 text-blue-900 text-5xl">
           GET TO KNOW ABOUT US
         </p>
@@ -742,7 +747,64 @@ function Home() {
 
         {/* Buttons to File Complaint */}
         <div className="grid grid-cols-3 mx-[147px] gap-4 border-1 rounded-md p-12 border-blue-900">
-          <div className="grid grid-rows-6 gap-3">
+        <div className="grid grid-rows-6 gap-3">
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick(
+          `Deceptive emails or websites imitate trusted entities to trick users into revealing sensitive information,
+           If you have fallen victim to a phishing attack, take immediate action: 
+           Precautions and Prevention : Change passwords promptly.
+           Enable two-factor authentication for added security.
+           Stay vigilant and report phishing incidents promptly.
+           Verify the authenticity of emails and websites before sharing sensitive information`
+        )}
+      >
+        Phishing Fraud
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Unauthorized use of personal information', 
+        "Secure your identity:",
+        "•	Report promptly",
+        "•	Freeze credit",
+        "•	Monitor accounts",
+        "•	Update passwords",
+        "•	Enable two-factor authentication",
+        "Swift reporting and proactive measures crucial for combating identity theft.")}
+      >
+        Identity Theft
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Online Fraud popup content goes here.')}
+      >
+        Online Fraud
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Ransomware Attacks popup content goes here.')}
+      >
+        Ransomware Attacks
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Child Exploitation popup content goes here.')}
+      >
+        Child Exploitation
+      </button>
+      <button
+        className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
+        onClick={() => handleButtonClick('Cyberbullying popup content goes here.')}
+      >
+        Cyberbullying
+      </button>
+      {isPopupOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-75 flex items-center justify-center"
+          onClick={handlePopupClose}
+        >
+          <div className="bg-white m-9 h-[70%] w-[70%] p-12 rounded shadow-lg">
+            <div>{popupContent}</div>
             <button
               className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
               onClick={() =>
@@ -751,62 +813,7 @@ function Home() {
             >
               Phishing Fraud
             </button>
-            <button
-              className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
-              onClick={() =>
-                handleButtonClick("Identity Theft popup content goes here.")
-              }
-            >
-              Identity Theft
-            </button>
-            <button
-              className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
-              onClick={() =>
-                handleButtonClick("Online Fraud popup content goes here.")
-              }
-            >
-              Online Fraud
-            </button>
-            <button
-              className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
-              onClick={() =>
-                handleButtonClick("Ransomware Attacks popup content goes here.")
-              }
-            >
-              Ransomware Attacks
-            </button>
-            <button
-              className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
-              onClick={() =>
-                handleButtonClick("Child Exploitation popup content goes here.")
-              }
-            >
-              Child Exploitation
-            </button>
-            <button
-              className="p-3 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
-              onClick={() =>
-                handleButtonClick("Cyberbullying popup content goes here.")
-              }
-            >
-              Cyberbullying
-            </button>
-            {isPopupOpen && (
-              <div
-                className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-75 flex items-center justify-center"
-                // onClick={handlePopupClose}
-              >
-                <div className="bg-white p-6 rounded shadow-lg">
-                  <div>{popupContent}</div>
-                  <button
-                    className="mt-4 p-2 border rounded-md bg-blue-900 text-white font-semibold border-blue-800"
-                    // onClick={handlePopupClose}
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            )}
+            <Link to="/Complaint" className="mt-4 p-2.5 border rounded-md bg-blue-900 text-white font-semibold border-blue-800">File a Complaint</Link>
           </div>
           <div className="bg-gray-100 col-span-2">
             <div className="p-4">kjfbhsyudg</div>
@@ -849,35 +856,45 @@ function Home() {
               <img src="/images/img-2.jpeg" alt="" />
             </Col>
             <Col>
-              <Accordion defaultActiveKey="0">
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>Accordion Item #1</Accordion.Header>
-                  <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                  <Accordion.Header>Accordion Item #2</Accordion.Header>
-                  <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </Col>
+            <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>How do I access the AI Decision Legal System on your website?</Accordion.Header>
+        <Accordion.Body>
+        Navigate to the "Legal Services" section, where you can interact with our AI system to receive quick legal insights.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Is the Personalized Lawyer Support available 24/7?</Accordion.Header>
+        <Accordion.Body>
+        Yes, our platform connects you with legal experts around the clock to ensure support whenever you need it.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2">
+        <Accordion.Header>What steps should I take if I suspect credit card fraud, and how can your platform assist??</Accordion.Header>
+        <Accordion.Body>
+        Report the suspicion immediately, and our Credit Card Fraud Detection service will analyze the situation, providing guidance on the next steps to secure your accounts.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3">
+        <Accordion.Header>Do you offer legal advice in specific areas, or is it a general legal support service?</Accordion.Header>
+        <Accordion.Body>
+        Our Personalized Lawyer Support spans various legal areas, ensuring you get expert advice tailored to your specific legal needs.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="4">
+        <Accordion.Header>How does your platform handle user privacy and data security?</Accordion.Header>
+        <Accordion.Body>
+        We prioritize user privacy and employ robust security measures to safeguard your data. Our practices comply with industry standards and regulations.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="5">
+        <Accordion.Header>Can I submit my own topics or questions for consideration in your Blogs and Articles section?</Accordion.Header>
+        <Accordion.Body>
+        Absolutely! We encourage user engagement. Feel free to suggest topics or questions, and our team may include them in upcoming content.
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+    </Col>
           </Row>
         </div>
 
